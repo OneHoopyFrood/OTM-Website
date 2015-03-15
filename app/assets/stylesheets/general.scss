@@ -1,0 +1,100 @@
+body {
+    background-image: asset_url('thefieldiswhite.png');
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    background-position: bottom; 
+}
+
+.btn {
+	border-radius: 0;
+}
+
+.otm-border-left-col {
+    /*padding-left: 0;*/
+}
+.otm-border-left {
+    border-left: 5px solid $brand-primary;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+	.otm-border-left h1,
+	.otm-border-left h2,
+	.otm-border-left h3,
+	.otm-border-left h4,
+	.otm-border-left h5,
+	.otm-border-left h6 {
+		margin: 0;
+	}
+.otm-border-left:hover {
+    border-left-color: $brand-secondary;
+    background-color: lighten($brand-secondary, 50%);
+    cursor: pointer;
+}
+
+/* Updates */
+
+@media (min-width: 1200px) {
+    .otm-updates {
+        border-right: 1px dotted #ccc;
+    }
+}
+/* Events */
+
+.otm-events {}
+
+/* navbar */
+.navbar {
+    margin-top: 20px;
+    border-radius: 0;
+}
+.navbar-default {
+    background-color: $brand-primary;
+    border-color: darken($brand-primary, 6.5%);
+}
+/* title */
+
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #fff;
+}
+/* link */
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #fff;
+    background-color: darken($brand-primary, 6.5%);
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: darken($brand-primary, 6.5%);
+}
+.navbar-default .navbar-nav > .open > a {
+    background-color: darken($brand-primary, 6.5%);
+}
+.navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: darken($brand-primary, 6.5%);
+}
+/* mobile version */
+
+.navbar-default .navbar-toggle {
+    border-color: #DDD;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #DDD;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+    }
+}
