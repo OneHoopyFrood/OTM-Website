@@ -1,0 +1,104 @@
+// Site styles
+// =================================
+body {
+    background-image: asset_url('thefieldiswhite.png');
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+
+.otm-border-left {
+  border-left: 5px solid $brand-primary;
+  padding: 5px 10px;
+  margin: 5px 0;
+  color: $text-color;
+
+  h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+  }
+  &:hover {
+    border-left-color: $brand-secondary;
+    background-color: lighten($brand-secondary, 50%);
+  }
+}
+/* Updates */
+
+@media (min-width: 1200px) {
+    .otm-updates {
+        // border-right: 1px dotted #ccc;
+    }
+}
+/* Events */
+
+.otm-events {}
+
+// Navbar
+// =====================================
+.navbar {
+    margin-top: 20px;
+    border-radius: 0;
+}
+
+.navbar-default {
+    background-color: $brand-primary;
+    border-color: darken($brand-primary, 6.5%);
+
+    // brand
+    .navbar-brand {
+        color: #fff;
+    }
+    .navbar-brand:hover,
+    .navbar-brand:focus {
+        color: #fff;
+    }
+    
+    // links
+    .navbar-nav > li > a {
+        color: #fff;
+    }
+    .navbar-nav > li > a:hover,
+    .navbar-nav > li > a:focus {
+        color: #fff;
+        background-color: darken($brand-primary, 6.5%);
+    }
+    .navbar-nav > .active > a,
+    .navbar-nav > .active > a:hover,
+    .navbar-nav > .active > a:focus {
+        color: #fff;
+        background-color: darken($brand-primary, 6.5%);
+    }
+    .navbar-nav > .open > a {
+        background-color: darken($brand-primary, 6.5%);
+    }
+    .navbar-nav > .open > a:hover,
+    .navbar-nav > .open > a:focus {
+        color: #fff;
+        background-color: darken($brand-primary, 6.5%);
+    }
+    
+    // mobile
+    .navbar-toggle {
+        border-color: #DDD;
+    }
+    .navbar-toggle:hover,
+    .navbar-toggle:focus {
+        background-color: #DDD;
+    }
+    .navbar-toggle .icon-bar {
+        background-color: #CCC;
+    }
+    @media (max-width: 767px) {
+        .navbar-nav .open .dropdown-menu > li > a {
+            color: #777;
+        }
+        .navbar-nav .open .dropdown-menu > li > a:hover,
+        .navbar-nav .open .dropdown-menu > li > a:focus {
+            color: #333;
+        }
+    }
+}
