@@ -1,16 +1,30 @@
 // Site styles
 // =================================
 body {
-    background-image: asset_url('thefieldiswhite.png');
-    background-repeat: repeat-x;
-    background-attachment: fixed;
-    background-position: bottom;
+    // background-image: asset_url('thefieldiswhite.png');
+    // background-repeat: repeat-x;
+    // background-attachment: fixed;
+    // background-position: bottom;
 }
 
 .btn {
     border-radius: 0;
 }
 
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
 
 .otm-border-left {
   border-left: 5px solid $brand-primary;
@@ -36,6 +50,11 @@ body {
 /* Events */
 
 .otm-events {}
+
+// Sign up
+.sign-up h1{
+    text-align: center;
+}
 
 // Navbar
 // =====================================
