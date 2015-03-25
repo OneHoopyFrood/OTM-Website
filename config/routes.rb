@@ -1,21 +1,17 @@
 Rails.application.routes.draw do
   root 'pages#home'
+  
+  get 'help' => 'pages#help'
+  get 'about' => 'pages#about'
+  get 'contact' => 'pages#contact'
+  
+  get    'login' => 'sessions#new'
+  post   'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
 
-  # Mostly static pages
-  get '/home' => 'pages#home'
-  get '/map' => 'pages#map'
-  get '/help' => 'pages#help'
-
-  get '/signup' => 'users#new'
-   # get '/users/:id/edit' => 'users#edit', :as => :user
-
-  # resources :news
-
-  # resources :tales
-
-  # resources :events
-
+  get 'signup' => 'users#new'
   resources :users
-
+  # resources :articles
+  # resources :events
   # resources :locations
 end

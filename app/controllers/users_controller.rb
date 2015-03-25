@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		if @user.save
+			log_in @user
 			flash[:success] = "Welcome to OklahomaTulsaMission.com #{@user[:fname]}!"
 			redirect_to edit_user_path(@user)
 		else
