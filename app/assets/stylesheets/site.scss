@@ -12,33 +12,32 @@ body {
 }
 
 #error_explanation {
-  color: red;
-  ul {
     color: red;
-    margin: 0 0 30px 0;
-  }
+    ul {
+        color: red;
+        margin: 0 0 30px 0;
+    }
 }
 
 .field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
-  }
+    @extend .has-error;
+    .form-control {
+        color: $state-danger-text;
+    }
 }
 
 .otm-border-left {
-  border-left: 5px solid $brand-primary;
-  padding: 5px 10px;
-  margin: 5px 0;
-  color: $text-color;
-
-  h1,h2,h3,h4,h5,h6 {
-    margin: 0;
-  }
-  &:hover {
-    border-left-color: $brand-secondary;
-    background-color: lighten($brand-secondary, 50%);
-  }
+    border-left: 5px solid $brand-primary;
+    padding: 5px 10px;
+    margin: 5px 0;
+    color: $text-color;
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+    }
+    &:hover {
+        border-left-color: $brand-secondary;
+        background-color: lighten($brand-secondary, 50%);
+    }
 }
 /* Updates */
 
@@ -52,30 +51,35 @@ body {
 .otm-events {}
 
 // Sign up
-.centered-text{
+.centered-text {
     text-align: center;
 }
 
 // Navbar
 // =====================================
 .navbar {
-    margin-top: 20px;
+    margin-top: 40px;
     border-radius: 0;
 }
 
 .navbar-default {
     background-color: $brand-primary;
     border-color: darken($brand-primary, 6.5%);
-
     // brand
     .navbar-brand {
         color: #fff;
+
+        .otm-logo {
+            position: relative;
+            z-index: 99999;
+            bottom: 40px;
+            right: 5px;
+        }
     }
     .navbar-brand:hover,
     .navbar-brand:focus {
         color: #fff;
     }
-    
     // links
     .navbar-nav > li > a {
         color: #fff;
@@ -99,7 +103,6 @@ body {
         color: #fff;
         background-color: darken($brand-primary, 6.5%);
     }
-    
     // mobile
     .navbar-toggle {
         border-color: #DDD;
