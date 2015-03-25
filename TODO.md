@@ -1,7 +1,7 @@
 #OTM project
 -----
 
-##Steps to assignemnt comption
+##Steps to assignemnt completion
 - Profiles
     - Gravatar
     - Misson presidents
@@ -42,4 +42,14 @@
         - Recieve notificatoins
         - Recieve both
         - Recieve none (except system notices & pseronsal messages)
-- 
+- Login via Facebook and Google options
+- Social integrations
+- Donation option (for maintaining site only)
+    - Maybe find a yearly/montly plege service?
+
+##Later
+- Interactive map (show area tags, bounderies, etc.)
+- Gift shop (OTM Swag, rings, MissionT's, etc.)
+
+###Maybes (down the road)
+- An app?
