@@ -1,10 +1,10 @@
 #OTM project
------
+---
 
-##Steps to assignemnt completion
+##Steps to assignment completion
 - Profiles
     - Gravatar
-    - Misson presidents
+    - Mission Presidents
     - Areas
     - Bio
 - Privacy management
@@ -12,11 +12,12 @@
 - News and Updates
 - Events
 - Get logo in place
+- External Links
 
 ###Also
 - Update spec
 
------
+---
 
 ##Further steps before real release
 - Permissions system
@@ -43,12 +44,12 @@
         - Recieve both
         - Recieve none (except system notices & pseronsal messages)
 - Login via Facebook and Google options
-- Social integrations
+- Social integration
 - Donation option (for maintaining site only)
-    - Maybe find a yearly/montly plege service?
+    - Maybe find a yearly/monthly pledge service?
 
 ##Later
-- Interactive map (show area tags, bounderies, etc.)
+- Interactive map (show area tags, boundaries, etc.)
 - Gift shop (OTM Swag, rings, MissionT's, etc.)
 
 ###Maybes (down the road)
