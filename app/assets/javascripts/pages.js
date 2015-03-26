@@ -5,7 +5,7 @@ $(function () {
 		});
 	}
 	var grow = function (ele) {
-		$(ele).animate({ padding: '15px 10px;' }, 550, 'easeInOutQuad', function() {
+		$(ele).animate({ padding: '10px 10px;' }, 550, 'easeInOutQuad', function() {
 	 		ele.otmEasingFlag = false;
 	 	});
 	}
