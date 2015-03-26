@@ -16,7 +16,20 @@ class UsersController < ApplicationController
 	end
 
 	def edit
-		@user = User.find(params[:id])
+		if logged_in?
+			@user = User.find(current_user.id)
+		else
+			render :status => :forbidden, :text => "You must login to access that page"
+		end
+	end
+
+	def myaccount
+		if logged_in?
+			@user = current_user
+			render 'edit'
+		else
+			render :status => :forbidden, :text => "You must login to access that page"
+		end
 	end
 
 	private

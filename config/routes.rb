@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
 
   get 'signup' => 'users#new'
+  get 'myaccount' => 'users#myaccount'
   resources :users
   # resources :articles
   # resources :events
