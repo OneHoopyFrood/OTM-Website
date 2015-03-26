@@ -1,10 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Bitter|Roboto:400italic,700,400);
+
 // Site styles
 // =================================
 body {
+    background-image: asset_url('textures/upfeathers.png');
+    font-family: 'Roboto', 'Calibri', Sans-Serif;
+    font-size: 16px;
     // background-image: asset_url('thefieldiswhite.png');
     // background-repeat: repeat-x;
     // background-attachment: fixed;
     // background-position: bottom;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bitter', 'Helvetica', Serif;
 }
 
 .btn {
@@ -31,12 +39,15 @@ body {
     padding: 5px 10px;
     margin: 5px 0;
     color: $text-color;
+
+    @include transition(border-left-color .1s ease-in);
+
     h1, h2, h3, h4, h5, h6 {
         margin: 0;
     }
     &:hover {
         border-left-color: $brand-secondary;
-        background-color: lighten($brand-secondary, 50%);
+        // background-color: lighten($brand-secondary, 45%);
     }
 }
 /* Updates */
