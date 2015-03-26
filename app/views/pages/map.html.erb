@@ -1,2 +1,21 @@
-<h1>Pages#map</h1>
-<p>Find me in app/views/pages/map.html.erb</p>
+<% provide :title, 'Map' %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Mission Map</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-9">
+			<%= image_tag "otm-map-road-colors.png", class: 'img-responsive' %>
+		</div>
+		<div class="col-md-3">
+			<p>
+				This map is as current as possible but you can see a more up-to-date version by 
+				<a href="https://www.lds.org/maps/?signmein">logging into your lds account here</a> and then clicking 
+				<a href="https://www.lds.org/rcmaps/?lang=eng#ll=36.348294,-93.809257&z=6&m=google.road&id=mission:2011824&s=mission:2011824&q=Oklahoma Tulsa Mission&x=find&find=mission:2013185">this link.</a>
+			</p>
+		</div>
+	</div>
+</div>

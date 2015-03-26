@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#home'
   
+  get 'map' => 'pages#map'
   get 'help' => 'pages#help'
   get 'about' => 'pages#about'
   get 'contact' => 'pages#contact'
