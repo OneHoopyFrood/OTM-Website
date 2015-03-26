@@ -27,7 +27,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class="active">
-            <a href="#">Map</a>
+            <%= nav_link 'Map', map_path %>
           </li>
           <li>
             <a href="#">Alumni</a>
@@ -36,7 +36,7 @@
         <ul class="nav navbar-nav navbar-right">
           <% if !logged_in? %>
             <li>
-                <%= link_to 'Log in', login_path %>
+                <%= nav_link 'Log in', login_path %>
             </li>
           <% else %>
             <li>
@@ -45,8 +45,8 @@
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="userDrop">
-                <li><%= link_to "My Account", myaccount_path %></li>
-                <li><%= link_to "My Profile", '#' %></li>
+                <li><%= nav_link "My Account", myaccount_path %></li>
+                <li><%= nav_link "My Profile", '#' %></li>
                 <li class="divider"></li>
                 <li>
                   <%= link_to "Log out", logout_path, method: "delete" %>
