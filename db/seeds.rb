@@ -1,6 +1,6 @@
 User.create!(fname: "Cole",
              lname: "Panike",
-             email: "colepanike@gmail.com"
+             email: "colepanike@gmail.com",
              password: "superadmin",
              password_confirmation: "superadmin",
              admin: true )
@@ -8,7 +8,7 @@ User.create!(fname: "Cole",
 12.times do |n|
   fname  = Faker::Name.first_name
   lname = Faker::Name.last_name
-  email = "example-#{n+1}@example.com"
+  email = Faker::Internet.safe_email(fname)
   password = "password"
   User.create!(fname:  fname,
                lname: lname,
@@ -17,9 +17,10 @@ User.create!(fname: "Cole",
                password_confirmation: password)
 end
 
+rand = Random.new
 25.times do |n|
-  title = Faker::App.Name
-  body = Faker::Lorem.paragraph(4)
+  title = Faker::App.name
+  body = Faker::Lorem.paragraph(rand(15..20))
   user = User.order("RANDOM()").first
 
   Post.create!(
