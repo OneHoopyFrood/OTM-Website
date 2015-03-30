@@ -3,25 +3,14 @@
 	<div class="row">
 	    <div class="col-lg-8 otm-updates">
 	        <h1>News & Updates</h1>
-	        <a href="#">
-	        	<div class="otm-border-left row">
-	        	    <div class="col-lg-4">
-	        	        <%= image_tag 'nelson.jpeg', class: 'img-responsive' %>
-	        	    </div>
-	        	    <div class="col-lg-8">
-	        	        <h2>Elder Nelson for mission tour!</h2>
-	        	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam placeat facilis quo aliquam, ut obcaecati perferendis aliquid ex voluptas aut. Atque aut id, dolor nesciunt qui consequuntur tempora harum tempore.</p>
-	        	    </div>
+					<% @posts.each do |post| %>
+	        	<div class="otm-border-left">
+      	        <h2><%= post.title %></h2>
+      	        <small class="text-muted"><%= post.user.fullname %> - <%= post.created_at.to_s(:us_short_date) %></small><br>
+      	        <%= post.body[0..300] + (post.body.length > 300 ? "..." : "") %> <%=  link_to 'Read More', post %>
 	        	</div>
-        	</a>
-	        <div class="otm-border-left">
-	            <h2>Update 2</h2>
-	            <p>Pariatur nam consequatur similique rerum tempora, consectetur dolorum eaque voluptates illo. Odio ut velit distinctio eos quam suscipit quidem, vero. Voluptatem laboriosam iure non, veniam dicta optio consequatur, adipisci! Tenetur.</p>
-	        </div>
-	        <div class="otm-border-left">
-	            <h2>Update 3</h2>
-	            <p>Unde totam quis, rerum suscipit ea quasi facere? Deserunt numquam, nobis, maiores voluptas corrupti minima expedita eligendi maxime magni fugiat commodi cum delectus vel voluptatem nihil. Illo rerum incidunt aliquid.</p>
-	        </div>
+					<% end %>
+	        <%= will_paginate @posts %>
 	    </div>
 	    <div class="col-lg-4 otm-events">
 	        <h1>Events</h1>

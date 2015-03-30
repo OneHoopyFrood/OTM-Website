@@ -7,7 +7,7 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= render 'shared/favicon_meta' %>
+  <%= render 'layouts/favicon_meta' %>
 </head>
 
 <body>
@@ -47,6 +47,9 @@
               <ul class="dropdown-menu" role="menu" aria-labelledby="userDrop">
                 <li><%= nav_link "My Account", myaccount_path %></li>
                 <li><%= nav_link "My Profile", '#' %></li>
+                <% if current_user.admin? %>
+                  <li><%= nav_link "New Post", new_post_path %></li>
+                <% end %>
                 <li class="divider"></li>
                 <li>
                   <%= link_to "Log out", logout_path, method: "delete" %>

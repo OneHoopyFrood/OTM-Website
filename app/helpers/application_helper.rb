@@ -6,4 +6,10 @@ module ApplicationHelper
     	link_to link_text, link_path, options
 	  end
 	end
+
+  def markdown(text)
+    options = { hard_wrap: true, autolink: true, no_intraemphasis: true }
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, options)
+    sanitize markdown.render(text)
+  end
 end

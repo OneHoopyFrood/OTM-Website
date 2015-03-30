@@ -1,0 +1,13 @@
+<div class="btn-group">
+  <%= button_tag type: 'submit', class: "btn btn-primary" do %>
+    <%= fa_icon 'send' %> Publish
+  <% end %>
+  <%= link_to @post, class: 'btn btn-success' do %>
+    <%= fa_icon 'file' %> View
+  <% end %>
+  <%= link_to @post, class: 'btn btn-danger',
+              method: :delete,
+              data: { confirm: 'Are you sure you want to delete this post?' } do %>
+    <%= fa_icon 'close' %> Delete
+  <% end %>
+</div>

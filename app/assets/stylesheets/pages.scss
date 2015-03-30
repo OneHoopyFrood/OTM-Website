@@ -1,3 +1,17 @@
-// Place all the styles related to the Pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.otm-border-left {
+    border-left: 5px solid $brand-primary;
+    padding: 5px 10px;
+    margin: 5px 0;
+    color: $text-color;
+    cursor: default;
+
+    @include transition(border-left-color .25s ease-in, background-color .25s ease-in);
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+    }
+    &:hover {
+        border-left-color: $brand-secondary;
+        background-color: rgba(lighten($brand-secondary, 45%), .5);
+    }
+}

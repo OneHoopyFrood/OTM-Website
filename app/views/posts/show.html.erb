@@ -1,0 +1,21 @@
+<% provide(:title, @post.title) %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h1>
+        <%= @post.title %><br>
+        <small><%= @post.user.fullname %> - <%= @post.created_at.to_s(:us_short_date) %></small>
+      </h1>
+    </div>
+    <% if current_user_can_edit? @post %>
+      <div class="col-md-4">
+        <%= link_to 'Edit this', edit_post_path(@post), class: 'pull-right voffset3' %>
+      </div>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <%= markdown @post.body %>
+    </div>
+  </div>
+</div>

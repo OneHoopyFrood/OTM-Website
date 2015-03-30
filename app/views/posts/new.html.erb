@@ -1,0 +1,25 @@
+<% provide(:title, "New Post") %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h1>New Post</h1>
+      <%= form_for @post do |f| %>
+        <%= render 'posts/error_messages' %>
+
+        <div class="form-group">
+          <%= f.label :title, 'Title' %>
+          <%= f.text_field :title, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :body, 'Content' %>
+          <%= f.text_area :body, class: 'form-control' %>
+        </div>
+
+        <%= button_tag type: 'submit', class: "btn btn-primary" do %>
+          <%= fa_icon 'send' %> Publish
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

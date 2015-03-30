@@ -3,7 +3,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h1>My Account</h1>
+      <h1>
+        <%= @user.fname %> <%= @user.lname %>
+        <% if @user.admin? %>
+          <i class="fa fa-key text-warning" title="Administrator privileges" style="cursor: default;"></i>
+        <% end %>
+      </h1>
     </div>
   </div>
   <div class="row">
