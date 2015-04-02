@@ -11,13 +11,11 @@ class ProfilesController < ApplicationController
 
   # PATCH/PUT /users/1/profile
   def update
-    respond_to do |format|
-      if @profile.update(profile_params)
-        flash[:success] = "Profile was successfully updated."
-        redirect_to @profile
-      else
-        render :edit
-      end
+    if @profile.update(profile_params)
+      flash[:success] = "Profile was successfully updated."
+      redirect_to user_profile_path(@profile)
+    else
+      render :edit
     end
   end
 
@@ -27,6 +25,6 @@ class ProfilesController < ApplicationController
     end
 
     def profile_params
-      params.require(:profile).permit(:user_id, :bio, :service_start, :service_end, :facebook, :twitter, :g_plus, :areas)
+      params.require(:profile).permit(:user_id, :bio, :areas, :presidents, :service_start, :service_end, :facebook, :twitter, :g_plus)
     end
 end
