@@ -46,7 +46,7 @@
               </a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="userDrop">
                 <li><%= nav_link "My Account", myaccount_path %></li>
-                <li><%= nav_link "My Profile", '#' %></li>
+                <li><%= nav_link "My Profile", user_profile_path(current_user) %></li>
                 <% if current_user.admin? %>
                   <li><%= nav_link "New Post", new_post_path %></li>
                 <% end %>

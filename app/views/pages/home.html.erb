@@ -7,7 +7,7 @@
 	        	<div class="otm-border-left">
       	        <h2><%= post.title %></h2>
       	        <small class="text-muted"><%= post.user.fullname %> - <%= post.created_at.to_s(:us_short_date) %></small><br>
-      	        <%= post.body[0..300] + (post.body.length > 300 ? "..." : "") %> <%=  link_to 'Read More', post %>
+      	        <%= strip_tags( markdown( post.body[0..300] + (post.body.length > 300 ? "..." : "" ) ) ) %> <%=  link_to 'Read More', post %>
 	        	</div>
 					<% end %>
 	        <%= will_paginate @posts %>

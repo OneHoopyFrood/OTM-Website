@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  bio: MyText
+  service_start: 2015-03-30
+  service_end: 2015-03-30
+  facebook: MyString
+  twitter: MyString
+  g_plus: MyString
+  areas: MyString
+
+two:
+  user_id: 
+  bio: MyText
+  service_start: 2015-03-30
+  service_end: 2015-03-30
+  facebook: MyString
+  twitter: MyString
+  g_plus: MyString
+  areas: MyString

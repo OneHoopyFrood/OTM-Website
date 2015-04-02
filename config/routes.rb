@@ -12,7 +12,9 @@ Rails.application.routes.draw do
 
   get 'signup' => 'users#new'
   get 'myaccount' => 'users#myaccount'
-  resources :users, except: [:index, :show]
+  resources :users, except: [:index, :show] do
+    resource :profile, only: [:show, :edit, :update]
+  end
 
   resources :posts
   

@@ -9,6 +9,7 @@ User.create!(fname: "Cole",
   fname  = Faker::Name.first_name
   lname = Faker::Name.last_name
   email = Faker::Internet.safe_email(fname)
+  # profile
   password = "password"
   User.create!(fname:  fname,
                lname: lname,

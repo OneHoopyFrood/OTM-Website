@@ -9,7 +9,8 @@ module ApplicationHelper
 
   def markdown(text)
     options = { hard_wrap: true, autolink: true, no_intraemphasis: true }
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, options)
+    rndr = Redcarpet::Render::HTML.new(options)
+    markdown = Redcarpet::Markdown.new(rndr)
     sanitize markdown.render(text)
   end
 end
