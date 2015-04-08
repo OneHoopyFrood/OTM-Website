@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 	# before_action :admin_user, only: [:destroy]
 
   # def index
-    
+    # Search users here
   # end
 
 	def new
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 		if @user.save
 			log_in @user
 			flash[:success] = "Welcome to OklahomaTulsaMission.com #{@user[:fname]}!"
-			redirect_to edit_user_path(@user)
+			redirect_to user_profile_path(@user)
 		else
 			render 'new'
 		end
