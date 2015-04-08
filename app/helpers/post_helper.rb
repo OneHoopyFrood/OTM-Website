@@ -12,6 +12,6 @@ module PostHelper
   end
 
   def current_user_can_edit?(post)
-    user_can_edit?(post, current_user)
+    !current_user.nil? && user_can_edit?(post, current_user)
   end
 end

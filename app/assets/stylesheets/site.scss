@@ -85,12 +85,14 @@ a.no-decoration {
     // links
     .navbar-nav > li > a {
         color: #fff;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: darken($brand-primary, 6.5%);
+        }
     }
-    .navbar-nav > li > a:hover,
-    .navbar-nav > li > a:focus {
-        color: #fff;
-        background-color: darken($brand-primary, 6.5%);
-    }
+
     .navbar-nav > .active > a,
     .navbar-nav > .active > a:hover,
     .navbar-nav > .active > a:focus {
@@ -99,19 +101,20 @@ a.no-decoration {
     }
     .navbar-nav > .open > a {
         background-color: darken($brand-primary, 6.5%);
-    }
-    .navbar-nav > .open > a:hover,
-    .navbar-nav > .open > a:focus {
-        color: #fff;
-        background-color: darken($brand-primary, 6.5%);
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: darken($brand-primary, 6.5%);
+        }
     }
     // mobile
     .navbar-toggle {
         border-color: #DDD;
-    }
-    .navbar-toggle:hover,
-    .navbar-toggle:focus {
-        background-color: #DDD;
+        &:hover,
+        &:focus {
+            background-color: #DDD;
+        }
     }
     .navbar-toggle .icon-bar {
         background-color: #CCC;
@@ -119,10 +122,11 @@ a.no-decoration {
     @media (max-width: 767px) {
         .navbar-nav .open .dropdown-menu > li > a {
             color: #777;
-        }
-        .navbar-nav .open .dropdown-menu > li > a:hover,
-        .navbar-nav .open .dropdown-menu > li > a:focus {
-            color: #333;
+
+            &:hover,
+            &:focus {
+                color: #333;
+            }
         }
     }
 }

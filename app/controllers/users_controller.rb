@@ -3,7 +3,11 @@ class UsersController < ApplicationController
 	before_action :authorized_user, only: [:edit, :update, :destroy]
 	# before_action :admin_user, only: [:destroy]
 
-	def new 
+  # def index
+    
+  # end
+
+	def new
 		@user = User.new
 	end
 

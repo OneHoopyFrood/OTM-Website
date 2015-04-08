@@ -1,4 +1,5 @@
 $(function () {
+	var selector = '.otm-border-left.expander';
 	var inSpeed = 250;
 	var outSpeed = 550;
 
@@ -12,7 +13,7 @@ $(function () {
 	 		ele.otmEasingFlag = false;
 	 	});
 	}
-	$('.otm-border-left').mouseenter(function(){
+	$(selector).mouseenter(function(){
 		if (this.otmEasingFlag != true) {
 			this.otmEasingFlag = true;
 			grow(this);
@@ -22,7 +23,7 @@ $(function () {
 			grow(this);
 		}
 	});
-	$('.otm-border-left').mouseleave(function(){
+	$(selector).mouseleave(function(){
 		if (this.otmEasingFlag != true) {
 			this.otmEasingFlag = true;
 			shrink(this);

@@ -4,7 +4,7 @@
 	    <div class="col-lg-8 otm-updates">
 	        <h1>News & Updates</h1>
 					<% @posts.each do |post| %>
-	        	<div class="otm-border-left">
+	        	<div class="otm-border-left expander">
       	        <h2><%= post.title %></h2>
       	        <small class="text-muted"><%= post.user.fullname %> - <%= post.created_at.to_s(:us_short_date) %></small><br>
       	        <%= strip_tags( markdown( post.body[0..300] + (post.body.length > 300 ? "..." : "" ) ) ) %> <%=  link_to 'Read More', post %>
